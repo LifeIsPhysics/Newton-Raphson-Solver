@@ -1,2 +1,1 @@
-set(CMAKE_STANDARD_CXX 23)
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(NewtonRaphsonSolver main.cpp solver.cpp)
