@@ -17,9 +17,13 @@ int main(){
     unsigned maxNumIter;
     std::cout << "Give me a max iteration number (default: 1000): ";
     std::cin >> maxNumIter;
-
-    double x_res { solve(func, x0, tol, maxNumIter) };
-    std::cout << "The root of the function is " << std::setprecision(9) << x_res << '\n';
-
+    
+    try{
+        double x_res { solve(func, x0, tol, maxNumIter) };
+        std::cout << "The root of the function is " << std::setprecision(9) << x_res << '\n';
+    } catch(std::exception& e){
+        std::cout << e.what() << '\n';
+    }
+    
     return 0;
 }

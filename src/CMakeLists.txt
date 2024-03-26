@@ -1,1 +1,1 @@
-add_executable(NewtonRaphsonSolver main.cpp solver.cpp)
+add_executable(NewtonRaphsonSolver solver.cpp main.cpp)

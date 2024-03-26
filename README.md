@@ -5,4 +5,41 @@ inside a one-dimensional finite square well. It can be shown that this scenario 
 transcendental equation, whose roots can not be found with analytical methods. The Newton-Raphson root finding
 algorithm exactly solves this problem, by first guessing the solution $x_0$ and then updating the guess
 with the formula $x_n = x_n - \frac{f(x_n)}{f'(x_n)}$ iteratively until $|f(x_n)| < \epsilon$, where 
-$\epsilon$ is a really small number ($\approx 10^{-8}$).  
+$\epsilon$ is a really small number ($\approx 10^{-8}$).
+
+# Usage
+Only a recent C++ compiler and CMake is needed to run this program. On Arch Linux, both of these dependencies
+can be installed using `pacman`
+```bash
+sudo pacman -S g++ cmake
+```
+The repository can then be cloned with git on your local machine using HTTP/SSH
+```bash
+git clone https://github.com/LifeIsPhysics/Newton-Raphson-Solver.git # HTTP OR
+git clone git@github.com:LifeIsPhysics/Newton-Raphson-Solver.git     # SSH
+```
+Building this program is done with these commands
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
+The program can then be run with these commands
+```bash
+cd src
+./NewtonRaphsonSolver
+```
+and the tests with these command
+```bash
+cd test
+./Test
+```
+
+# Example output
+```bash
+Give me an initial guess for the root of the function x^2 - 2: 3
+Give me a tolerance (default: 1e-8): 1e-8
+Give me a max iteration number (default: 1000): 1000
+The root of the function is 1.41421356
+```

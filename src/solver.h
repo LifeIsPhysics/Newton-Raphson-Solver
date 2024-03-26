@@ -3,11 +3,13 @@
 
 #include <cmath>
 #include <functional>
+#include <iostream>
+#include <exception>
 
-using IntegrableFunc1D = std::function<double(double)>;
+using Func1D = std::function<double(double)>;
 
-double df(const IntegrableFunc1D& f, double x, double h=1e-12);
+double df(const Func1D& f, double x, double h=1e-12);
 
-double solve(const IntegrableFunc1D& f, double x0, double tol=1e-12, unsigned maxNumIter=5000);
+double solve(const Func1D& f, double x0, double tol=1e-12, unsigned maxNumIter=1000);
 
 #endif /* SOLVER_H */
