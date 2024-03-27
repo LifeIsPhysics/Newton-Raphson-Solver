@@ -8,8 +8,7 @@ project(
     "Algorithm to find the root of a function. The Newton Raphson algorithm."
   LANGUAGES CXX)
 
-add_subdirectory(src)
-add_subdirectory(test)
-
+add_executable(NewtonRaphsonSolver src/main.cpp src/solver.cpp src/helper.cpp src/equations.cpp)
 enable_testing()
 add_test(NAME mytest COMMAND Test)
+add_executable(Test src/test.cpp src/equations.cpp src/helper.cpp)

@@ -25,15 +25,9 @@ cd build
 cmake ..
 make
 ```
-The program can then be run with these commands
+The program can then be run with this commands
 ```bash
-cd src
 ./NewtonRaphsonSolver
-```
-and the tests with these command
-```bash
-cd test
-./Test
 ```
 
 # Example output
