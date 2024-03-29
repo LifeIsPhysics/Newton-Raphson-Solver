@@ -11,7 +11,7 @@ $\epsilon$ is a really small number ($\approx 10^{-8}$).
 Only a recent C++ compiler and CMake is needed to run this program. On Arch Linux, both of these dependencies
 can be installed using `pacman`
 ```bash
-sudo pacman -S g++ cmake
+sudo pacman -S gcc cmake
 ```
 The repository can then be cloned with git on your local machine using HTTP/SSH
 ```bash

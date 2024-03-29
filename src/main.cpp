@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
-#include "solver.h"
+#include "Solver.h"
+#include "Equation.h"
 
 auto func = [](double x)
     { return x * x - 2; };
@@ -18,8 +19,10 @@ int main(){
     std::cout << "Give me a max iteration number (default: 1000): ";
     std::cin >> maxNumIter;
     
+    Equation eq {[](double x){ return x * x - 2; }};
     try{
-        double x_res { solve(func, x0, tol, maxNumIter) };
+        Solver solver(eq, x0, tol, maxNumIter);
+        double x_res { solver.solve() };
         std::cout << "The root of the function is " << std::setprecision(9) << x_res << '\n';
     } catch(std::exception& e){
         std::cout << e.what() << '\n';
